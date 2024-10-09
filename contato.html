@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Contato - Lucas Lima Dev</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Cabeçalho fixo com navegação -->
+    <header>
+        <nav>
+            <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="contato.html">Contato</a></li> <!-- Página atual -->
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Conteúdo da página de contato -->
+    <div class="container">
+        <div class="contact-box">
+            <h1>Entre em Contato</h1>
+            <p>Você pode me encontrar nas redes sociais:</p>
+
+            <!-- Links das redes sociais em texto -->
+            <div class="social-links">
+                <a href="https://github.com/lucaslimandev" target="_blank">GitHub</a>
+                <a href="#" target="_blank">LinkedIn</a>
+                <a href="https://instagram.com/lucaslima_en" target="_blank">Instagram</a>
+                <a href="https://wa.me/77988223123" target="_blank">WhatsApp</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Lucas Lima Dev. Todos os direitos reservados.</p>
+    </footer>
+    <script>
+        // Função para mostrar/esconder o menu quando o ícone de hambúrguer for clicado
+        function toggleMenu() {
+            const menu = document.querySelector('.desktop-menu');
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

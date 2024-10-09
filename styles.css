@@ -1,0 +1,195 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo geral */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #1a1a1a;
+    color: #d9d9d9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    padding-top: 100px; /* Espaço suficiente para o conteúdo não ficar embaixo do cabeçalho */
+}
+
+/* Cabeçalho fixo e navegação */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #1a1a1a;
+    padding: 15px 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra para dar destaque */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #d9d9d9;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00cc99; /* Cor ao passar o mouse */
+}
+
+/* Estilo do ícone de hambúrguer */
+.hamburger {
+    display: none; /* Escondido por padrão */
+    font-size: 2rem;
+    color: #d9d9d9;
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* Menu suspenso ativo */
+.desktop-menu.active {
+    display: block;
+}
+
+/* Container central */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Título */
+h1 {
+    font-size: 2.5rem;
+    color: #00cc99;
+}
+
+/* Parágrafos */
+p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.construction-box {
+    margin-bottom: 20px;
+}
+
+/* Loader */
+.loader {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.circle-shadow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.circle {
+    width: 15px;
+    height: 15px;
+    background-color: #00cc99;
+    border-radius: 50%;
+    animation: bounce 0.6s infinite alternate;
+}
+
+.shadow {
+    width: 15px;
+    height: 5px;
+    background-color: rgba(0, 204, 153, 0.5);
+    margin-top: 5px;
+    border-radius: 50%;
+    animation: shrink 0.6s infinite alternate;
+}
+
+@keyframes bounce {
+    to {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes shrink {
+    to {
+        transform: scaleX(0.6);
+    }
+}
+
+/* Estilo do rodapé */
+footer {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+/* Responsividade - Telas menores (tablets e smartphones) */
+@media (max-width: 768px) {
+    body {
+        padding-top: 80px; /* Ajuste de padding para telas menores */
+    }
+
+    /* Mostrar o ícone de hambúrguer e esconder o menu de navegação */
+    .hamburger {
+        display: block;
+    }
+
+    .desktop-menu {
+        display: none; /* Escondido por padrão */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        width: 100%;
+        background-color: #1a1a1a;
+        text-align: center;
+    }
+
+    .desktop-menu li {
+        margin: 15px 0; /* Mais espaçamento entre os itens no menu suspenso */
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}
+
+/* Responsividade - Telas ainda menores (smartphones) */
+@media (max-width: 480px) {
+    body {
+        padding-top: 70px; /* Ajusta o espaço para telas muito pequenas */
+    }
+
+    h1 {
+        font-size: 1.8rem; /* Título ainda menor em telas muito pequenas */
+    }
+
+    p {
+        font-size: 0.9rem; /* Parágrafos menores */
+    }
+
+    footer {
+        font-size: 0.8rem; /* Texto menor no rodapé */
+    }
+}
