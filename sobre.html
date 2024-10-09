@@ -9,11 +9,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Cabeçalho fixo no topo -->
     <header>
-        <nav>
+        <nav class="navbar">
             <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
 
-            <ul>
+            <!-- Menu de navegação (escondido por padrão em mobile) -->
+            <ul class="desktop-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="sobre.html">Sobre</a></li>
                 <li><a href="contato.html">Contato</a></li>
@@ -21,6 +23,7 @@
         </nav>
     </header>
 
+    <!-- Conteúdo principal da página Sobre -->
     <div class="container">
         <div class="about-box">
             <h1>Sobre Lucas Lima Dev</h1>
@@ -34,6 +37,7 @@
     <footer>
         <p>&copy; 2024 Lucas Lima Dev. Todos os direitos reservados.</p>
     </footer>
+
     <script>
         // Função para mostrar/esconder o menu quando o ícone de hambúrguer for clicado
         function toggleMenu() {

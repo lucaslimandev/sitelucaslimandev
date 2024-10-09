@@ -10,10 +10,11 @@
 <body>
     <!-- Cabeçalho fixo com navegação -->
     <header>
-        <nav>
+        <nav class="navbar">
             <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
 
-            <ul>
+            <!-- Menu de navegação -->
+            <ul class="desktop-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="sobre.html">Sobre</a></li>
                 <li><a href="contato.html">Contato</a></li> <!-- Página atual -->
@@ -27,7 +28,7 @@
             <h1>Entre em Contato</h1>
             <p>Você pode me encontrar nas redes sociais:</p>
 
-            <!-- Links das redes sociais em texto -->
+            <!-- Links das redes sociais -->
             <div class="social-links">
                 <a href="https://github.com/lucaslimandev" target="_blank">GitHub</a>
                 <a href="#" target="_blank">LinkedIn</a>
@@ -41,6 +42,7 @@
     <footer>
         <p>&copy; 2024 Lucas Lima Dev. Todos os direitos reservados.</p>
     </footer>
+
     <script>
         // Função para mostrar/esconder o menu quando o ícone de hambúrguer for clicado
         function toggleMenu() {

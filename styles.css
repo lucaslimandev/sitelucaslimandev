@@ -1,101 +1,142 @@
-/* Reset básico */
+/* Configuração global */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Estilo geral */
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #1a1a1a;
+    background-color: #1a1a1a; /* Fundo escuro inspirado no ChatGPT */
     color: #d9d9d9;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    flex-direction: column;
     text-align: center;
-    min-height: 100vh;
-    padding-top: 100px; /* Espaço suficiente para o conteúdo não ficar embaixo do cabeçalho */
+    height: 100vh;
 }
 
-/* Cabeçalho fixo e navegação */
+a {
+    color: #00cc99; /* Cor verde para links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ffffff; /* Cor branca ao passar o mouse */
+}
+
+/* Estilo do cabeçalho e navegação */
 header {
+    width: 100%;
+    padding: 15px 0;
+    background-color: #1a1a1a; /* Mesmo fundo escuro */
     position: fixed;
     top: 0;
-    width: 100%;
-    background-color: #1a1a1a;
-    padding: 15px 0;
-    z-index: 100;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra para dar destaque */
+    left: 0;
+    z-index: 1000;
 }
 
-nav ul {
-    list-style: none;
+.navbar {
     display: flex;
-    justify-content: center;
-    margin: 0;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: #d9d9d9;
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: 400;
-    transition: color 0.3s;
-}
-
-nav ul li a:hover {
-    color: #00cc99; /* Cor ao passar o mouse */
-}
-
-/* Estilo do ícone de hambúrguer */
-.hamburger {
-    display: none; /* Escondido por padrão */
-    font-size: 2rem;
-    color: #d9d9d9;
-    cursor: pointer;
-    padding: 10px;
-}
-
-/* Menu suspenso ativo */
-.desktop-menu.active {
-    display: block;
-}
-
-/* Container central */
-.container {
-    display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.hamburger {
+    font-size: 30px;
+    cursor: pointer;
+    color: #00cc99; /* Cor do ícone de hambúrguer */
+    display: none; /* Escondido em desktop */
+}
+
+.desktop-menu {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.desktop-menu li {
+    margin-left: 20px;
+}
+
+.desktop-menu li a {
+    color: #00cc99;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.desktop-menu.active {
+    display: block; /* Mostra o menu ao clicar no hambúrguer */
+}
+
+/* Estilo para telas pequenas (Mobile) */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Exibe o ícone de hambúrguer em dispositivos móveis */
+    }
+
+    .desktop-menu {
+        display: none;
+        flex-direction: column;
+        background-color: #1a1a1a;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .desktop-menu li {
+        margin: 15px 0;
+    }
+
+    .desktop-menu.active {
+        display: flex;
+    }
+}
+
+/* Estilo das caixas de conteúdo */
+.container {
+    margin-top: 80px; /* Para evitar sobreposição com o cabeçalho fixo */
+}
+
+.construction-box, .about-box, .contact-box {
     padding: 20px;
 }
 
-/* Título */
 h1 {
     font-size: 2.5rem;
     color: #00cc99;
-}
-
-/* Parágrafos */
-p {
-    font-size: 1.2rem;
-    margin: 10px 0;
-}
-
-.construction-box {
     margin-bottom: 20px;
 }
 
-/* Loader */
+p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Estilo dos links das redes sociais na página de contato */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.social-links a {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Estilo do loader (carregamento) */
 .loader {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
 }
 
 .circle-shadow {
@@ -116,7 +157,7 @@ p {
 .shadow {
     width: 15px;
     height: 5px;
-    background-color: rgba(0, 204, 153, 0.5);
+    background-color: rgba(0, 204, 153, 0.5); /* Cor com opacidade para sombra */
     margin-top: 5px;
     border-radius: 50%;
     animation: shrink 0.6s infinite alternate;
@@ -139,57 +180,15 @@ footer {
     margin-top: 20px;
     font-size: 0.9rem;
     color: #888;
+    text-align: center;
 }
 
-/* Responsividade - Telas menores (tablets e smartphones) */
-@media (max-width: 768px) {
-    body {
-        padding-top: 80px; /* Ajuste de padding para telas menores */
-    }
-
-    /* Mostrar o ícone de hambúrguer e esconder o menu de navegação */
-    .hamburger {
-        display: block;
-    }
-
-    .desktop-menu {
-        display: none; /* Escondido por padrão */
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        width: 100%;
-        background-color: #1a1a1a;
-        text-align: center;
-    }
-
-    .desktop-menu li {
-        margin: 15px 0; /* Mais espaçamento entre os itens no menu suspenso */
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
-
-    p {
-        font-size: 1rem;
-    }
+/* Ajuste para links dentro do footer */
+footer a {
+    color: #00cc99;
+    font-size: 1rem;
 }
 
-/* Responsividade - Telas ainda menores (smartphones) */
-@media (max-width: 480px) {
-    body {
-        padding-top: 70px; /* Ajusta o espaço para telas muito pequenas */
-    }
-
-    h1 {
-        font-size: 1.8rem; /* Título ainda menor em telas muito pequenas */
-    }
-
-    p {
-        font-size: 0.9rem; /* Parágrafos menores */
-    }
-
-    footer {
-        font-size: 0.8rem; /* Texto menor no rodapé */
-    }
+footer a:hover {
+    color: #ffffff;
 }
