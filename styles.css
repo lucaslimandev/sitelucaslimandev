@@ -76,6 +76,11 @@ header {
     display: block; /* Exibe o menu ao clicar no hambúrguer */
 }
 
+.about-box p {
+    text-align: justify;
+}
+
+
 /* Responsivo para telas pequenas (Mobile) */
 @media (max-width: 768px) {
     .hamburger {
@@ -104,6 +109,10 @@ header {
     .container {
         padding: 0 20px; /* Espaço lateral em telas pequenas */
     }
+    .about-box p {
+        text-align: justify;
+    }
+    
 }
 
 /* Estilo das caixas de conteúdo */
