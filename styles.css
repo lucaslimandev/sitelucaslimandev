@@ -8,7 +8,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #1a1a1a; /* Fundo escuro */
+    background-color: #3b3b3b; /* Fundo escuro */
     color: #d9d9d9;
     min-height: 100vh;
     padding-top: 80px; /* Espaço para o cabeçalho fixo */
@@ -31,7 +31,7 @@ a:hover {
 header {
     width: 100%;
     padding: 15px 0;
-    background-color: #1a1a1a;
+    background-color: #1c1c1c;
     position: fixed;
     top: 0;
     left: 0;
@@ -50,7 +50,7 @@ header {
 .hamburger {
     font-size: 30px;
     cursor: pointer;
-    color: #00cc99;
+    color: #858585;
     display: none; /* Escondido em telas grandes */
 }
 
@@ -66,11 +66,15 @@ header {
 }
 
 .desktop-menu li a {
-    color: #00cc99;
+    color: #858585;
     font-size: 1.2rem;
     font-weight: bold;
 }
-
+.desktop-menu li a:hover {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
 /* Menu ativado em dispositivos móveis */
 .desktop-menu.active {
     display: block; /* Exibe o menu ao clicar no hambúrguer */
@@ -122,16 +126,31 @@ header {
     padding: 20px;
     text-align: left;
 }
+.curriculoclass {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: left;
+}
+.curriculoclass h2 {
+    color: #fff;
 
+}
+.curriculoclass h3 {
+    color: white;
+
+}
 h1 {
     font-size: 2.5rem;
-    color: #00cc99;
+    color: white;
     margin-bottom: 20px;
 }
+
 
 p {
     font-size: 1.2rem;
     margin-bottom: 20px;
+    color: white;
 }
 
 /* Página de contato - Links sociais */
